@@ -1,0 +1,12 @@
+HIGHLIGHTS  (3-5 bullet points, each <= 85 characters)
+==========================================================
+
+We identify global-DoF contamination as a methodological pitfall in 2D-driven mesh benchmarks.
+
+We propose PRP, a method-agnostic, pelvis-subtraction evaluation protocol that isolates pose recovery.
+
+We release CPU-only SMPL-X fitters: a raw-pose variant and a SMPLify-X+VPoser variant under MIT licence.
+
+On AGORA val the two fitters tie on 3D pose under PRP but VPoser yields visibly more natural bodies.
+
+QED compresses reconstructed meshes by 10x for only 14.3 mm geometric error.

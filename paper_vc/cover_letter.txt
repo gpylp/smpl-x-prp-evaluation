@@ -1,0 +1,47 @@
+Cover Letter -- The Visual Computer
+====================================
+
+To: The Editor-in-Chief, The Visual Computer
+
+Date: 19 September 2026
+
+Dear Editor,
+
+We are pleased to submit our manuscript entitled "A Pelvis-Relative Re-evaluation Protocol for 2D-Driven Human Mesh Reconstruction" for consideration as an Original Article in The Visual Computer.
+
+Summary of the work
+--------------------
+The manuscript makes three contributions:
+
+  1. We identify and formalise a methodological problem that has long affected 2D-driven human mesh reconstruction evaluation: when the 3D ground truth is stored in world coordinates (e.g.\ AGORA, MoCap), the standard MPJPE and PA-MPJPE saturate at the average pelvis-to-origin distance because the fitter has no way to recover the global translation. We term this effect *global-DoF contamination*.
+
+  2. We propose the Pelvis-Relative Protocol (PRP), a four-metric evaluation suite that subtracts the pelvis from both prediction and ground truth before computing 3D distances, and the pelvis 2D translation before computing reprojection errors. PRP isolates the genuine pose-recovery signal and is method-agnostic: it requires no code changes to existing pipelines.
+
+  3. We release a reproducible, CPU-only 2D-driven SMPL-X baseline consisting of two fitters (a raw-pose variant and a SMPLify-X + VPoser variant) and evaluate them on AGORA val under both the legacy protocol and PRP. The two fitters are statistically tied on 3D pose under PRP (Pelvis-PA-MPJPE 602.8 vs 602.1 mm) but VPoser yields visibly more natural bodies. We also apply Quadric Error Decimation and report a 10x face-count reduction at 14.3 mm RMS error.
+
+Why The Visual Computer
+-----------------------
+The Visual Computer is the natural venue for this work because the journal explicitly welcomes contributions that combine 3D geometry, mesh processing, and quantitative evaluation methodology. Our PRP is method-agnostic and reusable; our open-source fitters serve as a teaching baseline; and our QED results sit squarely within the journal's traditional scope on mesh simplification.
+
+Novelty and significance
+------------------------
+We are not aware of a prior systematic study of global-DoF contamination in 2D-driven mesh reconstruction evaluation. The closest related work in the learning-based literature relies on world-coordinate ground truth and therefore inherits the contamination we describe; our PRP provides a drop-in replacement that makes the contamination explicit. We believe the manuscript will be of interest to researchers working on SMPL-X, optimisation-based mesh recovery, evaluation methodology, and mesh compression.
+
+Conflicts and ethics
+--------------------
+The author declares no conflict of interest. No human subjects or animal experiments were involved. The AGORA dataset is used under its published licence. All code will be released under the MIT licence upon publication.
+
+Reviewer suggestions
+--------------------
+We have no preferred or non-preferred reviewers. Authors who have worked on evaluation methodology for SMPL-X or on mesh simplification would be suitable.
+
+We thank the editorial office for considering this submission.
+
+Sincerely,
+
+Pengyu Guo
+School of Computer Science
+Xi'an Polytechnic University
+Xi'an 710048, China
+Email: 1626342806@qq.com
+ORCID: 0000-0000-0000-0000
